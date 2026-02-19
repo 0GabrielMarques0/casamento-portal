@@ -2,22 +2,22 @@ import { Link } from "react-router-dom";
 import HeroCouple from "../components/HeroCouple";
 import { Calendar, Wine, Star } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCards, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/effect-cards';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-cards";
 
-import img1 from '../assets/carrousel/carousel-1.jpeg';
-import img2 from '../assets/carrousel/carousel-2.jpeg';
-import img3 from '../assets/carrousel/carousel-3.jpeg';
-import img4 from '../assets/carrousel/carousel-4.jpeg';
-import img5 from '../assets/carrousel/carousel-5.jpeg';
-import img7 from '../assets/carrousel/carousel-7.jpeg';
-import img8 from '../assets/carrousel/carousel-8.jpeg';
-import img9 from '../assets/carrousel/carousel-9.jpeg';
-import img10 from '../assets/carrousel/carousel-10.jpeg';
+import img1 from "../assets/carrousel/carousel-1.jpeg";
+import img2 from "../assets/carrousel/carousel-2.jpeg";
+import img3 from "../assets/carrousel/carousel-3.jpeg";
+import img4 from "../assets/carrousel/carousel-4.jpeg";
+import img5 from "../assets/carrousel/carousel-5.jpeg";
+import img7 from "../assets/carrousel/carousel-7.jpeg";
+import img8 from "../assets/carrousel/carousel-8.jpeg";
+import img9 from "../assets/carrousel/carousel-9.jpeg";
+import img10 from "../assets/carrousel/carousel-10.jpeg";
 
-import belemImg from '../assets/belem-de-maria.png';
+import belemImg from "../assets/belem-de-maria.png";
 
 const carouselImages = [img1, img2, img3, img4, img5, img7, img8, img9, img10];
 
@@ -121,6 +121,7 @@ const Home = () => {
             style={{
               fontSize: "3rem",
               marginBottom: "60px",
+              marginTop: "20px",
               fontFamily: "var(--font-serif)",
             }}
           >
@@ -196,6 +197,43 @@ const Home = () => {
               </p>
             </div>
           </div>
+
+          <div style={{ marginTop: "60px" }}>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd7AhhM8afdeHGJbtx-a1VUebi6erSN-kFXuqdwYq1f8VxiEA/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline"
+              style={{
+                borderColor: "#fff",
+                color: "#fff",
+                padding: "15px 40px",
+                fontSize: "1rem",
+                textDecoration: "none",
+                fontWeight: "bold",
+                backgroundColor: "rgba(255, 255, 255, 0.05)",
+                boxShadow: "0 4px 15px rgba(0,0,0,0.3)",
+                display: "inline-block",
+                borderRadius: "50px",
+                borderWidth: "1px",
+                borderStyle: "solid",
+                transition: "all 0.3s ease",
+                textTransform: "uppercase",
+                letterSpacing: "1px",
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.backgroundColor = "var(--color-primary)";
+                e.currentTarget.style.borderColor = "var(--color-primary)";
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.backgroundColor =
+                  "rgba(255, 255, 255, 0.05)";
+                e.currentTarget.style.borderColor = "#fff";
+              }}
+            >
+              Confirmar Presença
+            </a>
+          </div>
         </div>
       </div>
 
@@ -203,7 +241,7 @@ const Home = () => {
       <div id="dicas" className="container section-split">
         <div className="fade-in carousel-wrapper">
           <Swiper
-            effect={'cards'}
+            effect={"cards"}
             grabCursor={true}
             modules={[EffectCards, Autoplay]}
             autoplay={{
@@ -211,14 +249,19 @@ const Home = () => {
               disableOnInteraction: false,
             }}
             className="mySwiper"
-            style={{ width: '100%', aspectRatio: '3/4' }}
+            style={{ width: "100%", aspectRatio: "3/4" }}
           >
             {carouselImages.map((img, index) => (
-              <SwiperSlide key={index} style={{ borderRadius: '10px' }}>
+              <SwiperSlide key={index} style={{ borderRadius: "10px" }}>
                 <img
                   src={img}
                   alt={`Foto do Casal ${index + 1}`}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '10px' }}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "10px",
+                  }}
                 />
               </SwiperSlide>
             ))}

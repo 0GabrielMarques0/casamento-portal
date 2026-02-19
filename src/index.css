@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: 1fr;
   gap: 40px;
   align-items: center;
-  padding: 80px 20px;
+  padding: 20px 20px !important;
 }
 
 @media (min-width: 768px) {
@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 .section-dark {
   background-color: var(--color-text); /* Using dark slate as the dark bg */
   color: var(--color-white);
-  padding: 100px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
