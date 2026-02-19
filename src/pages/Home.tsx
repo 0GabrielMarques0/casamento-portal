@@ -58,7 +58,7 @@ const Home = () => {
       <div id="historia" className="container section-split">
         <div className="fade-in">
           <img
-            src="https://images.unsplash.com/photo-1623162432854-3407954932fa?q=80&w=1974&auto=format&fit=crop"
+            src={img4}
             alt="Joara e Gabriel"
             className="img-elegant"
           />
@@ -68,10 +68,21 @@ const Home = () => {
             Junte-se a nós nesta jornada de amor, alegria e felicidade eterna.
           </h2>
           <p style={{ marginTop: "20px", color: "#666" }}>
-            De um encontro casual a uma vida inteira juntos, descubra os
-            capítulos que nos trouxeram até aqui. Nossa jornada é uma tapeçaria
-            tecida com sorrisos, lágrimas e inúmeros momentos que nos levaram a
-            esta linda celebração de amor.
+            De um encontro casual a uma vida inteira juntos, queremos convidar
+            você a fazer parte de um novo capítulo que começa no dia 21/11/2026.
+            Nossa história teve início no final de 2021. A partir dali, o que
+            antes eram caminhos separados se transformou em um só. Sonhos foram
+            compartilhados, metas para o futuro foram traçadas e decisões
+            importantes — inclusive transições de carreira — foram vividas lado
+            a lado, sempre com apoio, parceria e muito amor. Rimos das
+            conquistas, nos fortalecemos nos desafios e aprendemos que até nos
+            momentos difíceis, quando as lágrimas apareceram, estar juntos fez
+            toda a diferença. Construímos novas amizades, fortalecemos laços
+            antigos e, pouco a pouco, o eu se transformou em nós. Agora, com o
+            coração cheio de gratidão e alegria, queremos celebrar o nosso SIM e
+            dar início a uma nova etapa da nossa história. E nada fará mais
+            sentido do que viver esse momento ao lado de pessoas tão especiais
+            como você.
           </p>
         </div>
       </div>
