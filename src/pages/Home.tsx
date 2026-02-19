@@ -17,6 +17,8 @@ import img8 from '../assets/carrousel/carousel-8.jpeg';
 import img9 from '../assets/carrousel/carousel-9.jpeg';
 import img10 from '../assets/carrousel/carousel-10.jpeg';
 
+import belemImg from '../assets/belem-de-maria.png';
+
 const carouselImages = [img1, img2, img3, img4, img5, img7, img8, img9, img10];
 
 const Home = () => {
@@ -81,7 +83,7 @@ const Home = () => {
             {" "}
             {/* Image on right for desktop */}
             <img
-              src="/src/assets/belem-de-maria.png"
+              src={belemImg}
               alt="Sítio Izabel de Bola"
               className="img-elegant"
             />
