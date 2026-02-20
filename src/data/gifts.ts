@@ -31,8 +31,8 @@ export const gifts: Gift[] = [
   },
   {
     "id": 5,
-    "name": "Capacete para Navegar no Instagram do Ex",
-    "description": "Proteção contra curtidas acidentais.",
+    "name": "Curso de 'Como dobrar lençol de elástico'",
+    "description": "Habilidade que a NASA ainda estuda.",
     "price": 95,
     "paymentLink": ""
   },
