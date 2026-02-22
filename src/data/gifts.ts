@@ -101,8 +101,8 @@ export const gifts: Gift[] = [
   },
   {
     "id": 15,
-    "name": "Treinamento Ninja para Sair sem Acordar o Bebê",
-    "description": "Passos leves e silenciosos.",
+    "name": "Treinamento Ninja para sair da Cama",
+    "description": "Sem acordar o parceiro(a).",
     "price": 110,
     "paymentLink": ""
   },
@@ -332,9 +332,9 @@ export const gifts: Gift[] = [
   },
   {
     "id": 48,
-    "name": "Aluguel de cachorro por 1 dia",
-    "description": "Treino antes do bebê.",
-    "price": 60,
+    "name": "Personal Stylist para Pijamas",
+    "description": "Porque a camiseta velha de político tem limites.",
+    "price": 120,
     "paymentLink": ""
   },
   {
@@ -675,7 +675,7 @@ export const gifts: Gift[] = [
   },
   {
     "id": 97,
-    "name": "Escudo Anti-Palpites sobre Filhos",
+    "name": "Escudo Anti-Palpites sobre a Casa",
     "description": "Protege contra 'na minha época era assim'.",
     "price": 130,
     "paymentLink": ""

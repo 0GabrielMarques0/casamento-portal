@@ -16,7 +16,7 @@ const HeroCouple = () => {
     }} className="fade-in">
       
       <p style={{ 
-        marginBottom: '2rem', 
+        marginBottom: '1rem', 
         letterSpacing: '3px', 
         fontSize: '1rem',
         textTransform: 'uppercase'

@@ -194,7 +194,7 @@ const Home = () => {
                 style={{ marginBottom: "20px" }}
               />
               <h3 style={{ color: "white" }}>19:00</h3>
-              <p style={{ color: "#ccc" }}>Festa</p>
+              <p style={{ color: "#ccc" }}>Jantar</p>
               <p
                 style={{
                   fontSize: "0.9rem",
