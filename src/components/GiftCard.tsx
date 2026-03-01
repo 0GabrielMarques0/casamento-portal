@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Gift } from "../types/gift";
-import { redirectToCheckout } from "../services/payment";
 
 interface GiftCardProps {
   gift: Gift;
@@ -8,7 +7,6 @@ interface GiftCardProps {
 
 const GiftCard: React.FC<GiftCardProps> = ({ gift }) => {
   const [loading, setLoading] = useState(false);
-  const [errorStatus, setErrorStatus] = useState<string | null>(null);
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat("pt-BR", {
@@ -17,23 +15,32 @@ const GiftCard: React.FC<GiftCardProps> = ({ gift }) => {
     }).format(value);
   };
 
-  const handleContribute = () => {
-    if (!gift.paymentLink) return;
-
+  const handlePayment = async () => {
     setLoading(true);
-    setErrorStatus(null);
+    
+    try {
+      const response = await fetch('/api/create-preference', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ giftId: gift.id }),
+      });
 
-    // UX: Loading visual de 1 segundo
-    setTimeout(() => {
-      try {
-        redirectToCheckout(gift.paymentLink!);
-        // Se o redirect ocorrer, não precisamos parar o loading, pois a página vai mudar.
-        // Mas caso falhe síncrono (validação de URL), o catch pega.
-      } catch (err) {
-        setLoading(false);
-        setErrorStatus("Link inválido");
+      const data = await response.json();
+
+      if (data.checkoutUrl) {
+        window.open(data.checkoutUrl, '_blank');
+      } else {
+        console.error('Error:', data.error);
+        alert('Erro ao processar pagamento. Tente novamente.');
       }
-    }, 1000);
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Erro ao processar pagamento. Tente novamente.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -96,49 +103,32 @@ const GiftCard: React.FC<GiftCardProps> = ({ gift }) => {
       </div>
 
       <div>
-        {errorStatus && (
-          <div
-            style={{
-              color: "#E57373",
-              fontSize: "0.85rem",
-              marginBottom: "10px",
-              textAlign: "center",
-            }}
-          >
-            {errorStatus}
-          </div>
-        )}
-
         <button
-          onClick={handleContribute}
-          disabled={!gift.paymentLink || loading}
+          onClick={handlePayment}
+          disabled={loading}
           style={{
             width: "100%",
             padding: "12px",
-            backgroundColor: !gift.paymentLink ? "#E0E0E0" : "#8AB6D6",
-            color: !gift.paymentLink ? "#9E9E9E" : "white",
+            backgroundColor: loading ? "#B8D4E8" : "#8AB6D6",
+            color: "white",
             border: "none",
             borderRadius: "6px",
             fontSize: "1rem",
             fontWeight: "600",
-            cursor: !gift.paymentLink || loading ? "not-allowed" : "pointer",
+            cursor: loading ? "wait" : "pointer",
             transition: "background-color 0.3s",
-            opacity: loading ? 0.8 : 1,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
             height: "48px",
           }}
           onMouseEnter={(e) => {
-            if (gift.paymentLink && !loading)
+            if (!loading)
               e.currentTarget.style.backgroundColor = "#7AA8C8";
           }}
           onMouseLeave={(e) => {
-            if (gift.paymentLink && !loading)
+            if (!loading)
               e.currentTarget.style.backgroundColor = "#8AB6D6";
           }}
         >
-          {loading ? "Redirecionando..." : "Contribuir"}
+          {loading ? "Processando..." : "Contribuir"}
         </button>
       </div>
     </div>

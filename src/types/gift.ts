@@ -3,5 +3,5 @@ export interface Gift {
   name: string;
   description: string;
   price: number;
-  paymentLink?: string; // Optional because some gifts might not have a link yet
+  paymentLink?: string; // Mercado Pago payment link
 }

@@ -45,7 +45,9 @@ const Gifts = () => {
             textTransform: 'uppercase'
           }}>
             Lista de Presentes
+            
           </h2>
+
           <div style={{
             width: '60px',
             height: '2px',
