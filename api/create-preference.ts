@@ -104,6 +104,17 @@ const gifts = [
   { id: 100, name: "Asado Argentino Completo", price: 200 },
 ];
 
+// Calcula parcelas sem juros baseado no valor
+// Até R$100: 2x | R$100-300: 3x | R$300-500: 4x | +200 = +1 parcela
+function calculateFreeInstallments(price: number): number {
+  if (price <= 100) return 2;
+  // A cada R$200 acima de R$100, adiciona 1 parcela
+  const extraInstallments = Math.ceil((price - 100) / 200);
+  const installments = 2 + extraInstallments;
+  // Limita a 12 parcelas (máximo do MP)
+  return Math.min(installments, 12);
+}
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -152,6 +163,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             currency_id: 'BRL',
           }
         ],
+        payment_methods: {
+          // Máximo de parcelas permitidas (dinâmico baseado no valor)
+          installments: 12,
+          // Parcelas sem juros baseado no valor do presente
+          default_installments: calculateFreeInstallments(gift.price)
+        },
         back_urls: {
           success: 'https://casamento-portal.vercel.app/pagamento-sucesso',
           failure: 'https://casamento-portal.vercel.app/pagamento-erro',
