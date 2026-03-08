@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import HeroCouple from "../components/HeroCouple";
-import { Calendar, Wine, Star } from "lucide-react";
+import { Calendar, Wine, Star, MapPin } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards, Autoplay } from "swiper/modules";
@@ -142,17 +142,37 @@ const Home = () => {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(min(200px, 100%), 1fr))",
               gap: "40px",
             }}
           >
+            <div className="fade-in">
+              <MapPin
+                size={48}
+                color="var(--color-primary)"
+                style={{ marginBottom: "20px" }}
+              />
+              <h3 style={{ color: "white" }}>15:00</h3>
+              <p style={{ color: "#ccc" }}>Chegada</p>
+              <p
+                style={{
+                  fontSize: "0.9rem",
+                  color: "#aaa",
+                  maxWidth: "200px",
+                  margin: "0 auto",
+                }}
+              >
+                Recepção dos convidados no Sítio Izabel de Bola.
+              </p>
+            </div>
+
             <div className="fade-in">
               <Calendar
                 size={48}
                 color="var(--color-primary)"
                 style={{ marginBottom: "20px" }}
               />
-              <h3 style={{ color: "white" }}>16:30</h3>
+              <h3 style={{ color: "white" }}>16:00</h3>
               <p style={{ color: "#ccc" }}>Cerimônia</p>
               <p
                 style={{
@@ -172,7 +192,7 @@ const Home = () => {
                 color="var(--color-primary)"
                 style={{ marginBottom: "20px" }}
               />
-              <h3 style={{ color: "white" }}>17:30</h3>
+              <h3 style={{ color: "white" }}>17:00</h3>
               <p style={{ color: "#ccc" }}>Cocktail</p>
               <p
                 style={{

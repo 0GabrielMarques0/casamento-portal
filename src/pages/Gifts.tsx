@@ -6,15 +6,28 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ITEMS_PER_PAGE = 12;
 
+// Fisher-Yates shuffle algorithm
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 const Gifts = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  
+  // Shuffle gifts once when component mounts (empty dependency array)
+  const shuffledGifts = useMemo(() => shuffleArray(gifts), []);
 
-  const totalPages = Math.ceil(gifts.length / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil(shuffledGifts.length / ITEMS_PER_PAGE);
 
   const currentGifts = useMemo(() => {
     const start = (currentPage - 1) * ITEMS_PER_PAGE;
-    return gifts.slice(start, start + ITEMS_PER_PAGE);
-  }, [currentPage]);
+    return shuffledGifts.slice(start, start + ITEMS_PER_PAGE);
+  }, [currentPage, shuffledGifts]);
 
   const handlePageChange = (page: number) => {
     if (page < 1 || page > totalPages) return;
@@ -69,7 +82,7 @@ const Gifts = () => {
       <SectionContainer>
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', 
+          gridTemplateColumns: 'repeat(auto-fill, minmax(min(280px, 100%), 1fr))', 
           gap: '30px',
           marginBottom: '60px'
         }}>

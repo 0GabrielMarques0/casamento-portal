@@ -20,7 +20,7 @@ const Confirmation = () => {
         <div style={{ 
           textAlign: 'center', 
           backgroundColor: 'white', 
-          padding: '60px 40px', 
+          padding: 'clamp(30px, 5vw, 60px) clamp(20px, 5vw, 40px)', 
           borderRadius: '16px',
           boxShadow: '0 10px 25px rgba(0,0,0,0.05)',
           maxWidth: '500px',

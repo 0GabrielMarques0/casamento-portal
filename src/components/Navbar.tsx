@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Gift } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -95,15 +95,31 @@ const Navbar = () => {
           }}>Lista de Presentes</Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="mobile-menu-btn" 
-          onClick={toggleMenu}
-          aria-label="Menu"
-          style={{ color: 'inherit' }}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Menu Button + Presentes Link */}
+        <div className="mobile-nav-right">
+          <Link 
+            to="/presentes" 
+            className="mobile-presentes-btn"
+            aria-label="Lista de Presentes"
+            style={{ 
+              color: 'inherit',
+              padding: '5px',
+              display: 'flex',
+              alignItems: 'center',
+              marginRight: '10px'
+            }}
+          >
+            <Gift size={24} />
+          </Link>
+          <button 
+            className="mobile-menu-btn" 
+            onClick={toggleMenu}
+            aria-label="Menu"
+            style={{ color: 'inherit' }}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Dropdown */}

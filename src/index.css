@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 :root {
   --color-primary: #8AB6D6; /* Soft blue */
   --color-secondary: #E0F2F7; /* Very light blue */
@@ -25,6 +30,12 @@ body {
   color: var(--color-text);
   line-height: 1.8;
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  max-width: 100vw;
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -92,6 +103,8 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-white);
   padding: 40px 20px;
   text-align: center;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .section-dark h2, .section-dark p {
@@ -101,18 +114,32 @@ h1, h2, h3, h4, h5, h6 {
 /* Image styling */
 .img-elegant {
   width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 4px; /* Slight radius */
+}
+
+/* Prevent overflow from any element */
+img, iframe, video, embed, object {
+  max-width: 100%;
 }
 
 /* Countdown */
 .countdown-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
   text-align: center;
   margin-top: 40px;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+@media (min-width: 480px) {
+  .countdown-container {
+    gap: 40px;
+  }
 }
 
 .countdown-item span {
@@ -121,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .countdown-number {
   font-family: var(--font-serif);
-  font-size: 3rem;
+  font-size: clamp(2rem, 8vw, 3rem);
   line-height: 1;
   min-width: 2ch; /* Ensure space for at least 2 characters */
   display: inline-block; /* Required for width to work */
@@ -130,10 +157,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .countdown-label {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-top: 5px;
+}
+
+@media (min-width: 480px) {
+  .countdown-label {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
 }
 
 a {
@@ -162,6 +196,7 @@ button {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  width: 100%;
 }
 
 /* Carousel Styles */
@@ -169,6 +204,7 @@ button {
   width: 100%;
   max-width: 300px; /* Mobile size */
   margin: 20px auto 0 auto;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -176,6 +212,19 @@ button {
     max-width: 450px; /* Desktop size */
     margin: 0 auto; /* Centered in its grid column */
   }
+}
+
+/* Swiper overflow fix */
+.swiper {
+  overflow: visible;
+}
+
+.swiper-slide {
+  overflow: hidden;
+}
+
+.mySwiper {
+  overflow: hidden !important;
 }
 
 /* Navbar Responsiveness */
@@ -190,6 +239,15 @@ button {
   border: none;
   color: var(--color-primary);
   padding: 5px;
+}
+
+.mobile-nav-right {
+  display: none;
+  align-items: center;
+}
+
+.mobile-presentes-btn {
+  display: none;
 }
 
 .mobile-menu-dropdown {
@@ -224,8 +282,16 @@ button {
     display: none;
   }
   
+  .mobile-nav-right {
+    display: flex;
+  }
+  
   .mobile-menu-btn {
     display: block;
+  }
+  
+  .mobile-presentes-btn {
+    display: inline-block;
   }
 
   .mobile-menu-dropdown.open {
@@ -236,9 +302,52 @@ button {
   .hide-on-mobile {
     display: none;
   }
+  
+  /* Prevent horizontal overflow on mobile */
+  .section-split > div {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .container {
+    padding: 0 15px;
+    max-width: 100%;
+  }
+  
+  h2 {
+    word-break: break-word;
+  }
+  
+  /* Grid programação responsivo */
+  .section-dark .container > div[style*="grid"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Extra small screens - prevent any overflow */
+@media (max-width: 400px) {
+  .countdown-container {
+    gap: 15px;
+  }
+  
+  .countdown-number {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  .script-font {
+    font-size: 2rem !important;
+  }
+  
+  .section-dark {
+    padding: 30px 15px;
+  }
 }

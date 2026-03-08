@@ -37,7 +37,7 @@ const HeroCouple = () => {
       
       <p style={{ 
         fontFamily: 'Great Vibes, cursive', 
-        fontSize: '3rem',
+        fontSize: 'clamp(1.8rem, 6vw, 3rem)',
         marginTop: '-10px'
       }}>
         Sítio Izabel de Bola
