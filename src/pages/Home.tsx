@@ -152,7 +152,7 @@ const Home = () => {
                 color="var(--color-primary)"
                 style={{ marginBottom: "20px" }}
               />
-              <h3 style={{ color: "white" }}>15:00</h3>
+              <h3 style={{ color: "white" }}>15:30</h3>
               <p style={{ color: "#ccc" }}>Chegada</p>
               <p
                 style={{

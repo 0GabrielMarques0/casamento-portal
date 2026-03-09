@@ -5,13 +5,13 @@ export const gifts: Gift[] = [
     "id": 1,
     "name": "Licença para Roncar (Finais de Semana)",
     "description": "Autorização especial assinada em cartório.",
-    "price": 75,
+    "price": 100,
   },
   {
     "id": 2,
     "name": "Bagels em Nova York",
     "description": "Café da manhã típico americano.",
-    "price": 60,
+    "price": 100,
   },
   {
     "id": 3,
@@ -23,19 +23,19 @@ export const gifts: Gift[] = [
     "id": 4,
     "name": "Fritadeira Elétrica (Airfryer)",
     "description": "Saúde e praticidade.",
-    "price": 320
+    "price": 400
   },
   {
     "id": 5,
     "name": "Curso de 'Como dobrar lençol de elástico'",
     "description": "Habilidade que a NASA ainda estuda.",
-    "price": 95
+    "price": 100
   },
   {
     "id": 6,
     "name": "Mixer de Mão",
     "description": "Versátil para sopas e molhos.",
-    "price": 140
+    "price": 180
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@ export const gifts: Gift[] = [
     "id": 9,
     "name": "Spotify sem anúncios na lua de mel",
     "description": "Trilha sonora sem interrupções.",
-    "price": 50
+    "price": 100
   },
   {
     "id": 10,
@@ -65,13 +65,13 @@ export const gifts: Gift[] = [
     "id": 11,
     "name": "Pílulas de 'Sim, querida'",
     "description": "Para evitar discussões longas.",
-    "price": 50
+    "price": 100
   },
   {
     "id": 12,
     "name": "Croissant aos pés da Torre Eiffel",
     "description": "Clichê, mas delicioso.",
-    "price": 80
+    "price": 100
   },
   {
     "id": 13,
@@ -83,7 +83,7 @@ export const gifts: Gift[] = [
     "id": 14,
     "name": "Passe livre para jogar videogame",
     "description": "Válido para as quartas-feiras.",
-    "price": 80
+    "price": 100
   },
   {
     "id": 15,
@@ -95,19 +95,19 @@ export const gifts: Gift[] = [
     "id": 16,
     "name": "Cadeira de Escritório",
     "description": "Para o home office confortável.",
-    "price": 550
+    "price": 800
   },
   {
     "id": 17,
     "name": "Curso de 'Ouvir sem dar solução'",
     "description": "Habilidade essencial.",
-    "price": 90
+    "price": 100
   },
   {
     "id": 18,
     "name": "Curso de como usar a máquina de lavar",
     "description": "Manual prático para o marido.",
-    "price": 50
+    "price": 100
   },
   {
     "id": 19,
@@ -119,7 +119,7 @@ export const gifts: Gift[] = [
     "id": 20,
     "name": "Controle remoto universal",
     "description": "Aquele que domina todos.",
-    "price": 85
+    "price": 100
   },
   {
     "id": 21,
@@ -137,13 +137,13 @@ export const gifts: Gift[] = [
     "id": 23,
     "name": "Micro-ondas",
     "description": "O salvador dos apressados.",
-    "price": 350
+    "price": 600
   },
   {
     "id": 24,
     "name": "Ingressos para o cinema (filme dele)",
     "description": "Ação e explosões garantidas.",
-    "price": 70
+    "price": 100
   },
   {
     "id": 25,
@@ -155,7 +155,7 @@ export const gifts: Gift[] = [
     "id": 26,
     "name": "Panela de Pressão Elétrica",
     "description": "Feijão pronto em minutos.",
-    "price": 360
+    "price": 400
   },
   {
     "id": 27,
@@ -167,7 +167,7 @@ export const gifts: Gift[] = [
     "id": 28,
     "name": "Lava-Louças",
     "description": "O fim da pia cheia.",
-    "price": 1100
+    "price": 3000
   },
   {
     "id": 29,
@@ -179,19 +179,19 @@ export const gifts: Gift[] = [
     "id": 30,
     "name": "Liquidificador Potente",
     "description": "Para sucos e vitaminas.",
-    "price": 180
+    "price": 280
   },
   {
     "id": 31,
     "name": "Purificador de Água",
     "description": "Água geladinha sempre.",
-    "price": 480
+    "price": 800
   },
   {
     "id": 32,
     "name": "Fogão 5 bocas",
     "description": "Para banquetes ou miojo rápido.",
-    "price": 600
+    "price": 1200
   },
   {
     "id": 33,
@@ -203,7 +203,7 @@ export const gifts: Gift[] = [
     "id": 34,
     "name": "Kit Ressaca Pós-Festa",
     "description": "Engov e água de coco.",
-    "price": 50
+    "price": 100
   },
   {
     "id": 35,
@@ -221,7 +221,7 @@ export const gifts: Gift[] = [
     "id": 37,
     "name": "Churrasqueira Elétrica",
     "description": "Churrasco na varanda sem fumaça.",
-    "price": 320
+    "price": 280
   },
   {
     "id": 38,
@@ -233,7 +233,7 @@ export const gifts: Gift[] = [
     "id": 39,
     "name": "Café infinito",
     "description": "Combustível vitalício.",
-    "price": 99
+    "price": 100
   },
   {
     "id": 40,
@@ -245,7 +245,7 @@ export const gifts: Gift[] = [
     "id": 41,
     "name": "Adega Climatizada",
     "description": "Para os amantes de vinho.",
-    "price": 650
+    "price": 1500
   },
   {
     "id": 42,
@@ -275,13 +275,13 @@ export const gifts: Gift[] = [
     "id": 46,
     "name": "Geladeira Moderna",
     "description": "Para guardar as sobras com estilo.",
-    "price": 800
+    "price": 3500
   },
   {
     "id": 47,
     "name": "Kit Anti-Gelo nos Pés",
     "description": "Meias térmicas para não encostar o pé gelado no outro.",
-    "price": 75
+    "price": 100
   },
   {
     "id": 48,
@@ -293,13 +293,13 @@ export const gifts: Gift[] = [
     "id": 49,
     "name": "Botão de 'Mudo'",
     "description": "Uso com moderação.",
-    "price": 50
+    "price": 100
   },
   {
     "id": 50,
     "name": "Robô Aspirador",
     "description": "O novo melhor amigo do casal.",
-    "price": 700
+    "price": 2000
   },
   {
     "id": 51,
@@ -317,13 +317,13 @@ export const gifts: Gift[] = [
     "id": 53,
     "name": "Curso de Orientação no Shopping",
     "description": "Para ele não se perder na Zara.",
-    "price": 55
+    "price": 100
   },
   {
     "id": 54,
     "name": "Smart TV 55\"",
     "description": "Cinema em casa.",
-    "price": 1200
+    "price": 3000
   },
   {
     "id": 55,
@@ -335,7 +335,7 @@ export const gifts: Gift[] = [
     "id": 56,
     "name": "Jogo de Panelas",
     "description": "Antiaderente de verdade.",
-    "price": 400
+    "price": 500
   },
   {
     "id": 57,
@@ -359,13 +359,13 @@ export const gifts: Gift[] = [
     "id": 60,
     "name": "Ventilador Turbo",
     "description": "Para os dias de calor infernal.",
-    "price": 180
+    "price": 250
   },
   {
     "id": 61,
     "name": "Batedeira Planetária",
     "description": "Para bolos dignos de masterchef.",
-    "price": 450
+    "price": 1200
   },
   {
     "id": 62,
@@ -389,7 +389,7 @@ export const gifts: Gift[] = [
     "id": 65,
     "name": "Troféu 'Você Estava Certo(a)'",
     "description": "Item rotativo, mas sabemos que fica mais com ela.",
-    "price": 80
+    "price": 100
   },
   {
     "id": 66,
@@ -413,7 +413,7 @@ export const gifts: Gift[] = [
     "id": 69,
     "name": "Manual 'Como elogiar a comida da sogra'",
     "description": "Edição revisada com frases convincentes.",
-    "price": 85
+    "price": 100
   },
   {
     "id": 70,
@@ -437,7 +437,7 @@ export const gifts: Gift[] = [
     "id": 73,
     "name": "Bússola para Homem que Não Pede Informação",
     "description": "Evita rodar 20km a mais por orgulho.",
-    "price": 60
+    "price": 100
   },
   {
     "id": 74,
@@ -449,13 +449,13 @@ export const gifts: Gift[] = [
     "id": 75,
     "name": "Gelato em Roma",
     "description": "O verdadeiro sabor da Itália.",
-    "price": 50
+    "price": 100
   },
   {
     "id": 76,
     "name": "Ferro de Passar a Vapor",
     "description": "Para roupas impecáveis.",
-    "price": 150
+    "price": 200
   },
   {
     "id": 77,
@@ -503,7 +503,7 @@ export const gifts: Gift[] = [
     "id": 84,
     "name": "Paciência (Vendida separadamente)",
     "description": "Item essencial, estoque limitado.",
-    "price": 99.9
+    "price": 100
   },
   {
     "id": 85,
@@ -515,7 +515,7 @@ export const gifts: Gift[] = [
     "id": 86,
     "name": "Torradeira",
     "description": "Pão quentinho e crocante.",
-    "price": 120
+    "price": 150
   },
   {
     "id": 87,
@@ -527,19 +527,19 @@ export const gifts: Gift[] = [
     "id": 88,
     "name": "Fundo para o 'Eu avisei'",
     "description": "Para quando um dos dois tiver razão.",
-    "price": 50
+    "price": 100
   },
   {
     "id": 89,
     "name": "Aspirador de Pó Vertical",
     "description": "Prático e eficiente.",
-    "price": 250
+    "price": 500
   },
   {
     "id": 90,
     "name": "Taxa de Reembolso por Piada Ruim",
     "description": "Multa simbólica para trocadilhos do pavê.",
-    "price": 50
+    "price": 100
   },
   {
     "id": 91,
@@ -551,19 +551,19 @@ export const gifts: Gift[] = [
     "id": 92,
     "name": "Cafeteira Expresso",
     "description": "Energia líquida toda manhã.",
-    "price": 380
+    "price": 800
   },
   {
     "id": 93,
     "name": "Placa 'Proibido Opinar na Decoração'",
     "description": "Para manter a harmonia (e o estilo) do lar.",
-    "price": 70
+    "price": 100
   },
   {
     "id": 94,
     "name": "Máquina de Lavar",
     "description": "Lava, seca e quase dobra.",
-    "price": 900
+    "price": 2500
   },
   {
     "id": 95,
@@ -599,7 +599,7 @@ export const gifts: Gift[] = [
     "id": 100,
     "name": "Sanduicheira Grill",
     "description": "Para o misto quente perfeito.",
-    "price": 110
+    "price": 150
   }
 ];
 
