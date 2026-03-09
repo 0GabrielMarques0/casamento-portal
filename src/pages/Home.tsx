@@ -56,14 +56,14 @@ const Home = () => {
 
       {/* Introduction Section */}
       <div id="historia" className="container section-split">
-        <div className="fade-in">
+        <div data-aos="fade-right">
           <img
             src={img4}
             alt="Joara e Gabriel"
             className="img-elegant"
           />
         </div>
-        <div className="fade-in" style={{ paddingLeft: "20px" }}>
+        <div data-aos="fade-left" data-aos-delay="200" style={{ paddingLeft: "20px" }}>
           <h2 style={{ fontSize: "2.5rem", lineHeight: 1.2 }}>
             Junte-se a nós nesta jornada de amor, alegria e felicidade eterna.
           </h2>
@@ -90,7 +90,7 @@ const Home = () => {
       {/* Location Section */}
       <div id="local" style={{ backgroundColor: "#F5F5F5" }}>
         <div className="container section-split">
-          <div className="fade-in" style={{ order: 2 }}>
+          <div data-aos="fade-left" style={{ order: 2 }}>
             {" "}
             {/* Image on right for desktop */}
             <img
@@ -99,7 +99,7 @@ const Home = () => {
               className="img-elegant"
             />
           </div>
-          <div className="fade-in" style={{ order: 1 }}>
+          <div data-aos="fade-right" data-aos-delay="200" style={{ order: 1 }}>
             <h3
               className="script-font"
               style={{
@@ -129,6 +129,7 @@ const Home = () => {
       <div id="programacao" className="section-dark">
         <div className="container">
           <h2
+            data-aos="fade-down"
             style={{
               fontSize: "3rem",
               marginBottom: "60px",
@@ -146,7 +147,7 @@ const Home = () => {
               gap: "40px",
             }}
           >
-            <div className="fade-in">
+            <div data-aos="fade-up">
               <MapPin
                 size={48}
                 color="var(--color-primary)"
@@ -166,7 +167,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="fade-in">
+            <div data-aos="fade-up" data-aos-delay="100">
               <Calendar
                 size={48}
                 color="var(--color-primary)"
@@ -186,7 +187,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="fade-in">
+            <div data-aos="fade-up" data-aos-delay="200">
               <Wine
                 size={48}
                 color="var(--color-primary)"
@@ -207,7 +208,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="fade-in">
+            <div data-aos="fade-up" data-aos-delay="300">
               <Star
                 size={48}
                 color="var(--color-primary)"
@@ -270,7 +271,7 @@ const Home = () => {
 
       {/* Useful Info Section */}
       <div id="dicas" className="container section-split">
-        <div className="fade-in carousel-wrapper">
+        <div data-aos="zoom-in" className="carousel-wrapper">
           <Swiper
             effect={"cards"}
             grabCursor={true}
@@ -304,7 +305,7 @@ const Home = () => {
             ))}
           </Swiper>
         </div>
-        <div className="fade-in" style={{ paddingLeft: "20px" }}>
+        <div data-aos="fade-left" data-aos-delay="200" style={{ paddingLeft: "20px" }}>
           <h2 style={{ fontSize: "2.5rem" }}>
             Informações{" "}
             <span
@@ -417,6 +418,7 @@ const Home = () => {
         }}
       >
         <h2
+          data-aos="fade-up"
           style={{
             fontSize: "2.5rem",
             color: "white",
@@ -426,7 +428,7 @@ const Home = () => {
           Comece a Contagem Regressiva
         </h2>
 
-        <div className="countdown-container">
+        <div className="countdown-container" data-aos="zoom-in" data-aos-delay="200">
           <div className="countdown-item">
             <span className="countdown-number">{timeLeft.days}</span>
             <span className="countdown-label">Dias</span>

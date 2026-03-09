@@ -3,6 +3,16 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 import '@fontsource/great-vibes'; // Elegant script font
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+// Initialize AOS
+AOS.init({
+  duration: 800,
+  once: true,
+  easing: 'ease-out-cubic',
+  offset: 100,
+});
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
