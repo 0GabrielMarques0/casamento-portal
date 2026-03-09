@@ -279,8 +279,14 @@ const Home = () => {
               delay: 2500,
               disableOnInteraction: false,
             }}
+            cardsEffect={{
+              perSlideOffset: 8,
+              perSlideRotate: 2,
+              rotate: true,
+              slideShadows: true,
+            }}
             className="mySwiper"
-            style={{ width: "100%", aspectRatio: "3/4" }}
+            style={{ width: "100%", aspectRatio: "3/4", overflow: "visible" }}
           >
             {carouselImages.map((img, index) => (
               <SwiperSlide key={index} style={{ borderRadius: "10px" }}>

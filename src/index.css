@@ -204,19 +204,21 @@ button {
   width: 100%;
   max-width: 300px; /* Mobile size */
   margin: 20px auto 0 auto;
-  overflow: hidden;
+  overflow: visible;
+  padding: 20px;
 }
 
 @media (min-width: 768px) {
   .carousel-wrapper {
     max-width: 450px; /* Desktop size */
     margin: 0 auto; /* Centered in its grid column */
+    padding: 30px;
   }
 }
 
 /* Swiper overflow fix */
 .swiper {
-  overflow: visible;
+  overflow: visible !important;
 }
 
 .swiper-slide {
@@ -224,7 +226,12 @@ button {
 }
 
 .mySwiper {
-  overflow: hidden !important;
+  overflow: visible !important;
+}
+
+/* Ensure cards stack is visible */
+.swiper-cards .swiper-slide {
+  overflow: visible;
 }
 
 /* Navbar Responsiveness */
