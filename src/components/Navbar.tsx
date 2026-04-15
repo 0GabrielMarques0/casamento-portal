@@ -80,37 +80,41 @@ const Navbar = () => {
           <button onClick={() => scrollToSection('programacao')} style={{ background: 'none', border: 'none', color: 'inherit', fontSize: '1rem', padding: '0 15px' }}>Programação</button>
           <button onClick={() => scrollToSection('dicas')} style={{ background: 'none', border: 'none', color: 'inherit', fontSize: '1rem', padding: '0 15px' }}>Dicas</button>
           
-          <Link to="/presentes" style={{ 
-            marginLeft: '20px',
-            border: `1px solid ${scrolled ? 'var(--color-primary)' : 'white'}`, 
-            backgroundColor: scrolled ? 'var(--color-primary)' : 'rgba(255,255,255,0.2)',
-            color: 'white',
-            padding: '8px 25px', 
-            borderRadius: '25px',
-            fontSize: '0.9rem',
-            transition: 'all 0.3s ease',
-            textTransform: 'uppercase',
-            letterSpacing: '1px',
-            fontWeight: 'bold'
-          }}>Lista de Presentes</Link>
+          {location.pathname !== '/presentes' && (
+            <Link to="/presentes" style={{ 
+              marginLeft: '20px',
+              border: `1px solid ${scrolled ? 'var(--color-primary)' : 'white'}`, 
+              backgroundColor: scrolled ? 'var(--color-primary)' : 'rgba(255,255,255,0.2)',
+              color: 'white',
+              padding: '8px 25px', 
+              borderRadius: '25px',
+              fontSize: '0.9rem',
+              transition: 'all 0.3s ease',
+              textTransform: 'uppercase',
+              letterSpacing: '1px',
+              fontWeight: 'bold'
+            }}>Lista de Presentes</Link>
+          )}
         </div>
 
         {/* Mobile Menu Button + Presentes Link */}
         <div className="mobile-nav-right">
-          <Link 
-            to="/presentes" 
-            className="mobile-presentes-btn"
-            aria-label="Lista de Presentes"
-            style={{ 
-              color: 'inherit',
-              padding: '5px',
-              display: 'flex',
-              alignItems: 'center',
-              marginRight: '10px'
-            }}
-          >
-            <Gift size={24} />
-          </Link>
+          {location.pathname !== '/presentes' && (
+            <Link 
+              to="/presentes" 
+              className="mobile-presentes-btn"
+              aria-label="Lista de Presentes"
+              style={{ 
+                color: 'inherit',
+                padding: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                marginRight: '10px'
+              }}
+            >
+              <Gift size={24} />
+            </Link>
+          )}
           <button 
             className="mobile-menu-btn" 
             onClick={toggleMenu}
@@ -128,7 +132,9 @@ const Navbar = () => {
         <button onClick={() => scrollToSection('local')} style={{ background: 'none', border: 'none', padding: '15px', borderBottom: '1px solid #eee', width: '100%', fontSize: '1.1rem' }}>Local</button>
         <button onClick={() => scrollToSection('programacao')} style={{ background: 'none', border: 'none', padding: '15px', borderBottom: '1px solid #eee', width: '100%', fontSize: '1.1rem' }}>Programação</button>
         <button onClick={() => scrollToSection('dicas')} style={{ background: 'none', border: 'none', padding: '15px', borderBottom: '1px solid #eee', width: '100%', fontSize: '1.1rem' }}>Dicas Úteis</button>
-        <Link to="/presentes" onClick={closeMenu} style={{ padding: '15px', fontWeight: 'bold', color: 'var(--color-primary)' }}>Lista de Presentes</Link>
+        {location.pathname !== '/presentes' && (
+          <Link to="/presentes" onClick={closeMenu} style={{ padding: '15px', fontWeight: 'bold', color: 'var(--color-primary)' }}>Lista de Presentes</Link>
+        )}
       </div>
     </nav>
   );

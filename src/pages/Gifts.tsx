@@ -3,6 +3,7 @@ import SectionContainer from '../components/SectionContainer';
 import GiftCard from '../components/GiftCard';
 import { gifts } from '../data/gifts';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import bannerPresentes from '../assets/joaraGabrielPresentes.jpg';
 
 const ITEMS_PER_PAGE = 12;
 
@@ -37,30 +38,36 @@ const Gifts = () => {
 
   return (
     <div className="gifts-page">
-       {/* Small Hero / Header Section designed to match Home */}
-       <div style={{ 
-         padding: '120px 20px 60px', 
+       {/* Hero Banner similar to HeroCouple */}
+       <div style={{
+         height: '100vh',
+         width: '100%',
+         display: 'flex',
+         flexDirection: 'column',
+         justifyContent: 'center',
+         alignItems: 'center',
+         background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bannerPresentes}) center 30%/cover no-repeat`,
          textAlign: 'center',
-         backgroundColor: 'rgba(255,255,255,0.5)'
+         color: 'white',
+         position: 'relative'
        }} className="fade-in">
-          <h3 className="script-font" style={{ 
-            fontSize: "3.5rem", 
-            color: "var(--color-wood-dark)", 
-            marginBottom: "10px" 
-          }}>
-            Celebre Conosco
-          </h3>
-          <h2 style={{ 
-            fontSize: "2.5rem", 
-            marginTop: 0,
-            marginBottom: '24px',
-            letterSpacing: '2px',
-            textTransform: 'uppercase'
+          <h1 style={{ 
+            fontFamily: 'Great Vibes, cursive',
+            fontSize: "clamp(2.5rem, 6vw, 4rem)", 
+            color: "white", 
+            marginBottom: "5px",
+            textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
           }}>
             Lista de Presentes
-            
-          </h2>
+          </h1>
+       </div>
 
+       {/* Description Section */}
+       <div data-aos="fade-up" style={{ 
+         padding: '50px 20px', 
+         textAlign: 'center',
+         backgroundColor: '#fff'
+       }}>
           <div style={{
             width: '60px',
             height: '2px',
@@ -86,17 +93,18 @@ const Gifts = () => {
           gap: '30px',
           marginBottom: '60px'
         }}>
-          {currentGifts.map(gift => (
-            <GiftCard 
-              key={gift.id} 
-              gift={gift} 
-            />
+          {currentGifts.map((gift, index) => (
+            <div key={gift.id} data-aos="fade-up" data-aos-delay={index * 50}>
+              <GiftCard 
+                gift={gift} 
+              />
+            </div>
           ))}
         </div>
 
         {/* Pagination Controls */}
         {totalPages > 1 && (
-          <div style={{
+          <div data-aos="fade-up" style={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',

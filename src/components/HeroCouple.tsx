@@ -1,5 +1,7 @@
 
 
+import bannerImg from '../assets/joaraGabrielBanner.jpg';
+
 const HeroCouple = () => {
   return (
     <div style={{
@@ -9,7 +11,7 @@ const HeroCouple = () => {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      background: 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=2070&auto=format&fit=crop") center/cover no-repeat fixed',
+      background: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${bannerImg}) center/cover no-repeat fixed`,
       textAlign: 'center',
       color: 'white',
       position: 'relative'
@@ -19,7 +21,9 @@ const HeroCouple = () => {
         marginBottom: '1rem', 
         letterSpacing: '3px', 
         fontSize: '1rem',
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        position: 'relative',
+        zIndex: 2
       }}>
         21 . 11 . 2026
       </p>
@@ -30,7 +34,9 @@ const HeroCouple = () => {
         color: 'white', 
         fontFamily: 'var(--font-serif)',
         fontWeight: 'normal',
-        lineHeight: 1
+        lineHeight: 1,
+        position: 'relative',
+        zIndex: 2
       }}>
         JOARA & GABRIEL
       </h1>
@@ -38,7 +44,9 @@ const HeroCouple = () => {
       <p style={{ 
         fontFamily: 'Great Vibes, cursive', 
         fontSize: 'clamp(1.8rem, 6vw, 3rem)',
-        marginTop: '-10px'
+        marginTop: '-10px',
+        position: 'relative',
+        zIndex: 2
       }}>
         Sítio Izabel de Bola
       </p>

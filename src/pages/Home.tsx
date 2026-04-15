@@ -7,19 +7,22 @@ import { EffectCards, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-cards";
 
-import img1 from "../assets/carrousel/carousel-1.jpeg";
 import img2 from "../assets/carrousel/carousel-2.jpeg";
 import img3 from "../assets/carrousel/carousel-3.jpeg";
 import img4 from "../assets/carrousel/carousel-4.jpeg";
 import img5 from "../assets/carrousel/carousel-5.jpeg";
 import img7 from "../assets/carrousel/carousel-7.jpeg";
-import img8 from "../assets/carrousel/carousel-8.jpeg";
 import img9 from "../assets/carrousel/carousel-9.jpeg";
 import img10 from "../assets/carrousel/carousel-10.jpeg";
+import img11 from "../assets/carrousel/carousel-11.jpg";
+import img12 from "../assets/carrousel/carousel-12.jpg";
+import img13 from "../assets/carrousel/carousel-13.jpg";
+
 
 import belemImg from "../assets/belem-de-maria.png";
+import joaraGabrielImg from "../assets/joaraGabriel.jpg";
 
-const carouselImages = [img1, img2, img3, img4, img5, img7, img8, img9, img10];
+const carouselImages = [img5, img11, img3, img9, img7, img13, img2, img10, img4, img12];
 
 const Home = () => {
   const [timeLeft, setTimeLeft] = useState<{
@@ -58,7 +61,7 @@ const Home = () => {
       <div id="historia" className="container section-split">
         <div data-aos="fade-right">
           <img
-            src={img4}
+            src={joaraGabrielImg}
             alt="Joara e Gabriel"
             className="img-elegant"
           />
@@ -112,7 +115,7 @@ const Home = () => {
             </h3>
             <h2 style={{ fontSize: "2.5rem", marginTop: 0 }}>Belém de Maria</h2>
             <p style={{ color: "#666" }}>
-              Entre na beleza atemporal do Sítio Izabel de Bola. Tendo como pano
+              Entre na beleza atemporal do Sítio Izabel de Bola. Tendo como plano
               de fundo colinas ondulantes e uma natureza exuberante, nossa
               celebração se desenrola em um cenário de encanto rústico.
             </p>
