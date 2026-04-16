@@ -7,6 +7,11 @@ import Confirmation from './pages/Confirmation';
 import PaymentSuccess from './pages/PaymentSuccess';
 import PaymentPending from './pages/PaymentPending';
 import PaymentError from './pages/PaymentError';
+import BackgroundMusic from './components/BackgroundMusic';
+import chopinMusic from './assets/music/12Chopin_Ballade1InGMinorOp.23.ogg';
+
+// Chopin - Ballade No.1 in G minor, Op.23 (arquivo local)
+const MUSIC_URL = chopinMusic;
 
 // Componente para scroll to top em mudança de rota
 function ScrollToTop() {
@@ -23,6 +28,7 @@ function App() {
   return (
     <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <ScrollToTop />
+      <BackgroundMusic musicUrl={MUSIC_URL} />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
