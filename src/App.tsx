@@ -8,10 +8,10 @@ import PaymentSuccess from './pages/PaymentSuccess';
 import PaymentPending from './pages/PaymentPending';
 import PaymentError from './pages/PaymentError';
 import BackgroundMusic from './components/BackgroundMusic';
-import chopinMusic from './assets/music/12Chopin_Ballade1InGMinorOp.23.ogg';
+import music from './assets/music/A-Thousand-Years-Piano-Cover.mp3';
 
-// Chopin - Ballade No.1 in G minor, Op.23 (arquivo local)
-const MUSIC_URL = chopinMusic;
+// A Thousand Years (Piano) Cover
+const MUSIC_URL = music;
 
 // Componente para scroll to top em mudança de rota
 function ScrollToTop() {

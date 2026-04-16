@@ -14,7 +14,7 @@ const BackgroundMusic = ({ musicUrl }: BackgroundMusicProps) => {
   useEffect(() => {
     audioRef.current = new Audio(musicUrl);
     audioRef.current.loop = true;
-    audioRef.current.volume = 0.08;
+    audioRef.current.volume = 0.03;
 
     return () => {
       if (audioRef.current) {
