@@ -7,6 +7,7 @@ interface GiftCardProps {
 
 const GiftCard: React.FC<GiftCardProps> = ({ gift }) => {
   const [loading, setLoading] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat("pt-BR", {
@@ -47,77 +48,137 @@ const GiftCard: React.FC<GiftCardProps> = ({ gift }) => {
     <div
       className="gift-card"
       style={{
-        border: "1px solid rgba(138, 182, 214, 0.3)",
+        border: "1px solid rgba(138, 182, 214, 0.2)",
         backgroundColor: "#fff",
-        padding: "24px",
-        borderRadius: "12px",
-        boxShadow: "0 4px 12px rgba(138, 182, 214, 0.1)",
+        borderRadius: "16px",
+        boxShadow: isHovered 
+          ? "0 20px 40px rgba(0, 0, 0, 0.12)" 
+          : "0 4px 16px rgba(138, 182, 214, 0.15)",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        transition: "transform 0.2s, box-shadow 0.2s",
+        transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
         height: "100%",
-        minHeight: "280px",
+        minHeight: "460px",
+        overflow: "hidden",
+        transform: isHovered ? "translateY(-8px)" : "translateY(0)",
       }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.transform = "translateY(-5px)";
-        e.currentTarget.style.boxShadow = "0 8px 16px rgba(138, 182, 214, 0.2)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = "translateY(0)";
-        e.currentTarget.style.boxShadow = "0 4px 12px rgba(138, 182, 214, 0.1)";
-      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <div style={{ marginBottom: "20px" }}>
+      {/* Imagem no topo com design aprimorado */}
+      {gift.image && (
+        <div
+          style={{
+            width: "100%",
+            height: "220px",
+            position: "relative",
+            overflow: "hidden",
+            flexShrink: 0,
+            backgroundColor: "#fff",
+          }}
+        >
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              backgroundColor: "#f0f7fb",
+              overflow: "hidden",
+            }}
+          >
+            <img
+              src={gift.image}
+              alt={gift.name}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center top",
+                transition: "transform 0.4s ease",
+                transform: isHovered ? "scale(1.05)" : "scale(1)",
+                display: "block",
+              }}
+              loading="lazy"
+            />
+          </div>
+          {/* Gradiente sutil para transição suave */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              right: 0,
+              height: "60px",
+              background: "linear-gradient(to top, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0) 100%)",
+              pointerEvents: "none",
+            }}
+          />
+        </div>
+      )}
+
+      {/* Conteúdo do card */}
+      <div style={{ 
+        padding: "20px",
+        display: "flex",
+        flexDirection: "column",
+        flexGrow: 1,
+      }}>
         <h3
           style={{
-            fontSize: "1.4rem",
+            fontSize: "1.2rem",
             marginTop: 0,
-            marginBottom: "10px",
+            marginBottom: "8px",
             color: "#5D8AA8",
+            lineHeight: "1.3",
           }}
         >
           {gift.name}
         </h3>
         <p
           style={{
-            fontSize: "0.95rem",
+            fontSize: "0.9rem",
             color: "#666",
             lineHeight: "1.5",
-            marginTop: "10px",
-            marginBottom: "20px",
+            marginTop: "0",
+            marginBottom: "16px",
+            flexGrow: 1,
+            display: "-webkit-box",
+            WebkitLineClamp: 3,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
           }}
         >
           {gift.description}
         </p>
         <div
           style={{
-            fontSize: "1.5rem",
+            fontSize: "1.4rem",
             fontWeight: "bold",
             color: "#8AB6D6",
-            marginBottom: "20px",
+            marginBottom: "16px",
           }}
         >
           {formatCurrency(gift.price)}
         </div>
       </div>
 
-      <div>
+      <div style={{ padding: "0 20px 20px 20px" }}>
         <button
           onClick={handlePayment}
           disabled={loading}
           style={{
             width: "100%",
-            padding: "12px",
+            padding: "14px",
             backgroundColor: loading ? "#B8D4E8" : "#8AB6D6",
             color: "white",
             border: "none",
-            borderRadius: "6px",
+            borderRadius: "25px",
             fontSize: "1rem",
             fontWeight: "600",
             cursor: loading ? "wait" : "pointer",
-            transition: "background-color 0.3s",
-            height: "48px",
+            transition: "all 0.3s ease",
+            height: "50px",
+            boxShadow: isHovered ? "0 4px 12px rgba(138, 182, 214, 0.4)" : "none",
           }}
           onMouseEnter={(e) => {
             if (!loading)

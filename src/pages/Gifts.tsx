@@ -283,10 +283,11 @@ const Gifts = () => {
           display: 'grid', 
           gridTemplateColumns: 'repeat(auto-fill, minmax(min(280px, 100%), 1fr))', 
           gap: '30px',
-          marginBottom: '60px'
+          marginBottom: '60px',
+          alignItems: 'stretch'
         }}>
           {currentGifts.map((gift, index) => (
-            <div key={gift.id} data-aos="fade-up" data-aos-delay={index * 50}>
+            <div key={gift.id} data-aos="fade-up" data-aos-delay={index * 50} style={{ height: '100%' }}>
               <GiftCard 
                 gift={gift} 
               />

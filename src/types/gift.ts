@@ -11,5 +11,6 @@ export interface Gift {
   description: string;
   price: number;
   category: GiftCategory;
+  image?: string; // URL da imagem do presente
   paymentLink?: string; // Mercado Pago payment link
 }
