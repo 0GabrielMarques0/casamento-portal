@@ -118,6 +118,7 @@ const giftsData: Omit<Gift, "image">[] = [
   { id: 76, name: "Ferro de Passar a Vapor", description: "Para roupas impecáveis.", price: 200, category: "Eletrodomésticos" },
   { id: 89, name: "Aspirador de Pó Vertical", description: "Prático e eficiente.", price: 500, category: "Eletrodomésticos" },
   { id: 94, name: "Máquina de Lavar", description: "Lava, seca e quase dobra.", price: 2500, category: "Eletrodomésticos" },
+  { id: 101, name: "Máquina de Água com Gás SodaStream", description: "Água com gás na hora, sem garrafas.", price: 650, category: "Eletrodomésticos" },
 
   // ---------------------------------------------------------------------------
   // 🍳 COZINHA
