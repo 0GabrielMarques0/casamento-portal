@@ -398,7 +398,7 @@ const Home = () => {
               }}
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3948.336647982245!2d-35.84814492419403!3d-8.594569091450655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMzUnNDAuNSJTIDM1wrA1MCc0NC4xIlc!5e0!3m2!1spt-BR!2sbr!4v1708284000000!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948!2d-35.5974!3d-8.6275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aa01266cc9915f%3A0xf1d0c549a6b68e1b!2sS%C3%ADtio%20Izabel%20de%20Bola!5e0!3m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
