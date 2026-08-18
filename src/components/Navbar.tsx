@@ -80,15 +80,31 @@ const Navbar = () => {
           <button onClick={() => scrollToSection('programacao')} style={{ background: 'none', border: 'none', color: 'inherit', fontSize: '1rem', padding: '0 15px' }}>Programação</button>
           <button onClick={() => scrollToSection('dicas')} style={{ background: 'none', border: 'none', color: 'inherit', fontSize: '1rem', padding: '0 15px' }}>Dicas</button>
           
+          {location.pathname !== '/confirmar-presenca' && (
+            <Link to="/confirmar-presenca" style={{ 
+              marginLeft: '10px',
+              border: `1px solid ${scrolled ? 'var(--color-wood-dark)' : 'white'}`, 
+              backgroundColor: scrolled ? 'var(--color-wood-dark)' : 'rgba(255,255,255,0.2)',
+              color: 'white',
+              padding: '8px 20px', 
+              borderRadius: '25px',
+              fontSize: '0.85rem',
+              transition: 'all 0.3s ease',
+              textTransform: 'uppercase',
+              letterSpacing: '1px',
+              fontWeight: 'bold'
+            }}>Confirmar Presença</Link>
+          )}
+          
           {location.pathname !== '/presentes' && (
             <Link to="/presentes" style={{ 
-              marginLeft: '20px',
+              marginLeft: '10px',
               border: `1px solid ${scrolled ? 'var(--color-primary)' : 'white'}`, 
               backgroundColor: scrolled ? 'var(--color-primary)' : 'rgba(255,255,255,0.2)',
               color: 'white',
-              padding: '8px 25px', 
+              padding: '8px 20px', 
               borderRadius: '25px',
-              fontSize: '0.9rem',
+              fontSize: '0.85rem',
               transition: 'all 0.3s ease',
               textTransform: 'uppercase',
               letterSpacing: '1px',
@@ -132,6 +148,9 @@ const Navbar = () => {
         <button onClick={() => scrollToSection('local')} style={{ background: 'none', border: 'none', padding: '15px', borderBottom: '1px solid #eee', width: '100%', fontSize: '1.1rem' }}>Local</button>
         <button onClick={() => scrollToSection('programacao')} style={{ background: 'none', border: 'none', padding: '15px', borderBottom: '1px solid #eee', width: '100%', fontSize: '1.1rem' }}>Programação</button>
         <button onClick={() => scrollToSection('dicas')} style={{ background: 'none', border: 'none', padding: '15px', borderBottom: '1px solid #eee', width: '100%', fontSize: '1.1rem' }}>Dicas Úteis</button>
+        {location.pathname !== '/confirmar-presenca' && (
+          <Link to="/confirmar-presenca" onClick={closeMenu} style={{ padding: '15px', fontWeight: 'bold', color: 'var(--color-wood-dark)', borderBottom: '1px solid #eee', display: 'block' }}>Confirmar Presença</Link>
+        )}
         {location.pathname !== '/presentes' && (
           <Link to="/presentes" onClick={closeMenu} style={{ padding: '15px', fontWeight: 'bold', color: 'var(--color-primary)' }}>Lista de Presentes</Link>
         )}

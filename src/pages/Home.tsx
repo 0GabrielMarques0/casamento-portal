@@ -234,10 +234,8 @@ const Home = () => {
           </div>
 
           <div style={{ marginTop: "60px" }}>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSd7AhhM8afdeHGJbtx-a1VUebi6erSN-kFXuqdwYq1f8VxiEA/viewform?usp=header"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/confirmar-presenca"
               className="btn-outline"
               style={{
                 borderColor: "#fff",
@@ -267,7 +265,7 @@ const Home = () => {
               }}
             >
               Confirmar Presença
-            </a>
+            </Link>
           </div>
         </div>
       </div>
