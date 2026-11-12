@@ -4,7 +4,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Gifts from './pages/Gifts';
 import Confirmation from './pages/Confirmation';
-import RSVP from './pages/RSVP';
+import RSVPClosed from './pages/RSVPClosed';
 import PaymentSuccess from './pages/PaymentSuccess';
 import PaymentPending from './pages/PaymentPending';
 import PaymentError from './pages/PaymentError';
@@ -34,7 +34,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="presentes" element={<Gifts />} />
-          <Route path="confirmar-presenca" element={<RSVP />} />
+          <Route path="confirmar-presenca" element={<RSVPClosed />} />
           <Route path="confirmacao" element={<Confirmation />} />
           <Route path="pagamento/sucesso" element={<PaymentSuccess />} />
           <Route path="pagamento/pendente" element={<PaymentPending />} />

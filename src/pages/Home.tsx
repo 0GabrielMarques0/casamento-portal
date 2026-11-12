@@ -232,41 +232,6 @@ const Home = () => {
               </p>
             </div>
           </div>
-
-          <div style={{ marginTop: "60px" }}>
-            <Link
-              to="/confirmar-presenca"
-              className="btn-outline"
-              style={{
-                borderColor: "#fff",
-                color: "#fff",
-                padding: "15px 40px",
-                fontSize: "1rem",
-                textDecoration: "none",
-                fontWeight: "bold",
-                backgroundColor: "rgba(255, 255, 255, 0.05)",
-                boxShadow: "0 4px 15px rgba(0,0,0,0.3)",
-                display: "inline-block",
-                borderRadius: "50px",
-                borderWidth: "1px",
-                borderStyle: "solid",
-                transition: "all 0.3s ease",
-                textTransform: "uppercase",
-                letterSpacing: "1px",
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.backgroundColor = "var(--color-primary)";
-                e.currentTarget.style.borderColor = "var(--color-primary)";
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.backgroundColor =
-                  "rgba(255, 255, 255, 0.05)";
-                e.currentTarget.style.borderColor = "#fff";
-              }}
-            >
-              Confirmar Presença
-            </Link>
-          </div>
         </div>
       </div>
 
